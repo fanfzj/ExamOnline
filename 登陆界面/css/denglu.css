@@ -1,0 +1,39 @@
+/* CSS Document */
+   .jiemiandiv
+   {
+	width: 450px;
+	/*border: 1px #0000CC solid;*/
+	margin-left: 430px;
+	margin-top: 175px;
+	height: 240px;
+	color: #C60;
+	   /*background:url(../image/357571.jpg);*/
+	}
+
+	 /*界面表格控制*/
+	.dengmenu{
+		margin-top:1px;
+		margin-left:8px;
+		} 
+	 /*.main
+	{
+		width:1310px;
+		border:1px #000000 solid;
+		margin-left:0px;
+		marign-top:0px;
+		height:650px;
+		background-image:url(../image/background.jpg);
+		background-repeat:no-repeat;
+		background-size:1310px 650px;*/
+     }
+body{margin:0 auto; font-size:12px; font-family: Helvetica, Tahoma, Arial, sans-serif; font-weight:normal; }
+img { border:none;}
+ul, ul li, p{margin:0; padding:0; list-style:none;}
+.full{width:840px; margin:0 auto;}
+.font_red{color:#f00; font-size:12px; }
+.font_gray{color:#333;}
+a.font_gray:link, a.font_gray:visited, a.font_gray:active{color:#900; text-decoration:underline; font-size:12px;}
+/*a.font_gray:hover{color:#f00;}*/
+a.font_gray14:link, a.font_gray14:visited, a.font_gray14:active{color:#333; text-decoration:underline; font-size:14px;}
+a.font_gray14:hover{color:#f00;}
+.clear{clear:both;}
