@@ -1,0 +1,20 @@
+USE [Exam] 
+GO
+/****** Object:  StoredProcedure [dbo].[sp_Grade]   Script Date: 09/30/2013 22:31:47 ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+
+CREATE procedure [dbo].[sp_Grade]
+@XZT int,
+@TKT int,
+@DXT int,
+@PXT int,
+@PDT int,
+@JDT int
+as
+begin
+  declare @Grade int;
+  update TB_Grade  set Grade =XZT+TKT+DXT+PXT+PDT+JDT where XZT=@XZT AND TKT=@TKT and DXT=@DXT and PXT=@PXT and PDT=@PDT and JDT=@JDT
+end;
