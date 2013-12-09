@@ -1,0 +1,62 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>--登录--</title>
+<link rel="stylesheet" type="text/css" href="css/denglu.css" />
+<style type="text/css">
+</style>
+<script type="text/javascript" src="js/jquery-1.10.2.min.js" ></script>
+<script type="text/javascript" src="js/jj.js" ></script>
+</head>
+<body style="background:url(image/backgroud1.jpg)">
+  <div class="jiemiandiv">
+  <form action="lognstusave.php" method="post" onsubmit="return chkinput(form)"/>
+    <table background="image/backgroud2.jpg"height="241" border="0" class="dengmenu" >
+      <tr>
+         <td width="150" height="17">
+         学生
+         </span>
+         </td>                
+        <td  width="150" height="17"> <a href="tealogn.html"target="_top">老师</a> </td>
+      </tr >
+ 
+      <tr>
+        <td width="150" height="57">用户名(StuUser): </td>
+        <td width="227"><input name="username" type="text"/></td>
+      </tr>
+      <tr>
+        <td>密码(StuPwd):</td>
+        <td><input type="password" name="pwd" /></td>
+        <tr>
+         <td>
+        <input type="submit" id="button" value="登录" />
+        </td>
+        <td>
+        <input name="button1" type="reset" value="重置" />
+         </td>
+      </tr>
+    </table>
+</form>
+</div>       
+<script language="javascript" type="text/javascript">
+   function chkinput(form)              //定义一个判断函数
+   {
+	  if(form.username.value=="")  
+	  //判断username文本框中的只是否为空
+	  { 
+          alert("请输入用户名!");
+		  form.username.select();         //返回username文本框
+		  return (false);
+	  }
+	  if(form.pwd.value=="")         //判断用户名文本框中的只是否为空
+	  {
+		  alert("请输入密码!");
+		  form.pwd.select();         //返回到密码文本框
+		  return (false);
+	  }
+	   return (true);                   //提交表单
+   }
+</script>
+</body>
+</html>

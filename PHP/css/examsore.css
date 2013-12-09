@@ -1,0 +1,137 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	margin:10px;
+}
+#content{
+	border-left:1px solid #11a3ff;      /*大边框宽度*/
+	border-right:1px solid #11a3ff;
+	border-bottom:1px solid #11a3ff;
+	padding:15px;/*整体内容与大边框的距离*/
+	font-size:22px;/*内容（字）的大小*/
+}
+ul#tabnav{
+	list-style-type:none;
+	margin:0px;
+	padding-left:0px;
+	padding-bottom:23px;
+	border-bottom:1px solid #11a3ff;
+	font:bold 12px verdan, arial;
+}
+ul#tabnav li{
+	float:left;
+	height:22px;
+	background-color:#a3dbff;
+	margin:0px 3px 0px 0px;/*小标题的距离*/
+	border:1px solid #11a3ff;/*小标题边框的粗细*/
+}
+ul#tabnav a:link, ul#tabnav a:visited{
+	display:block;
+	color:#006;
+	text-decoration:none;
+	padding:5px 10px 3px 10px;
+}
+ul#tabnav a:hover{
+	background-color:#006;
+	color:#0FF;
+}
+body#st li.st, body#grzl li.grzl,
+body#cj li.cj, body#ma li.ma,
+body#bk li.bk, body#blog li.blog{
+	border-bottom:1px solid #ffffff;
+	color:#000000;
+	background-color:#ffffff;
+}
+body#st li.st a:link, body#st li.st a:visited,
+body#grzl li.grzl a:link, body#grzl li.grzl a:visited,
+body#cj li.cj a:link, body#cj li.cj a:visited,
+body#ma li.ma a:link,body#ma li.ma a:visited,
+body#bk li.bk a:link, body#bk li.bk a:visited
+body#blog li.blog a:link,  body#blog li.blog a:visited{
+	color:#006;
+	text-decoration:underline
+}
+
+
+#leftpic{
+	
+	width:160px;
+	float:left;
+	padding-right:15px;
+}
+#leftpic a:link,#leftpic a:visited{
+	color:#006eb3;
+	text-decoration:none;
+}
+#leftpic a:hover{
+	
+	color:#000000;
+	text-decoration:underline;
+	}
+img{
+	border:1px solid #069;
+	margin-bottom:5px;
+}
+ul#list{
+	
+	list-style-type:none;
+	margin:0px;
+	padding:5px 0px 5px 2px;
+}
+ul#list li{
+	line-height:18px;
+}
+ul#list li a:link{
+	color:#000;
+	text-decoration:none;
+}
+ul#list li a:visited{
+	color:#333;
+	text-decoration:none;
+}
+ul#list li a:hover{
+	
+	color:#006;
+	text-decoration:underline;
+}
+#content1{
+	width:980px;;
+	margin-top:20px;
+	border-left:1px  ;      /*大边框宽度*/
+	border-right:1px;
+	border-bottom:1px  ;
+	padding:20px;/*整体内容与大边框的距离*/
+	font-size:18px;/*内容（字）的大小*/
+}
+.tbhead {
+    background-color: #698CC3;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-weight: 800;
+}
+<style type="text/css">
+* {
+    font-family: "宋体";
+    fony-size: 12px
+}
+
+;
+.tbhead {
+    background-color: #698CC3;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-weight: 800;
+}
+
+;
+.tbleft {
+    border: 1px dashed #698CC3;
+    background-color: #EFEFEF;
+}
+
+;
+.tbright {
+    background-color: #FFFFFF;
+    border: 1px dashed #698CC3;
+}
+

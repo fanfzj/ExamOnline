@@ -1,0 +1,65 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link rel="stylesheet" type="text/css" href="../css/examsore.css"/>
+
+</style>
+</head>
+   <?php
+ include ("../conn/conn.php");   //连接数据库
+?>
+<body bgcolor="#9ac5b5" id="cj">
+<ul id="tabnav">
+      <li class="st"><a href="学生主界面右界面.html">试题查询</a></li>
+      <li class="grzl"><a href="student.php" >个人资料</a></li>
+     <li class="cj"><a href="成绩查询界面.html">成绩查询</a></li>
+      <li class="ma"><a href="修改密码界面.html">修改密码</a></li>
+      <li class="bk"><a href="补考查询界面.html">补考查询</a></li>
+
+</ul>
+<div id="content">
+  <span id="leftpic">
+  <form action="examscore.php" method="post">
+    <table width="1000" border="1" cellspacing="0" cellpadding="0">
+      <tr>
+        <th width="330" scope="col">姓名：<input type="text" name="username" value="范志俊"/></th>
+        <th width="330" scope="col">专业：<input type="text" name="zy" value="计算机科学与技术"/></th>
+        <th width="332" scope="col">学号：<input type="text" name="sno" value="2012021039"/></th>
+      </tr>
+    </table>
+    <div id="content1">
+<table style="border: 1px dashed #698CC3; width: 100%; line-height: 200%;"
+    cellpadding="0px" cellspacing="0px">
+    <tr>
+        <td align="center" colspan="8" class="tbhead">考试成绩</td>
+    </tr>
+    <tr>
+        <th class="tbleft">科目</th>
+        <th class="tbleft">填空题</th>
+        <th class="tbleft">选择题</th>
+        <th class="tbleft">多选题</th>
+        <th class="tbleft">排序题</th>
+        <th class="tbleft">判断题</th>
+        <th class="tbleft">简答题</th>
+        <th class="tbleft">得分</th>
+    </tr>
+    <tr align='center'>
+        <td class='tbright'>JAVA</td>
+        <td class='tbright'>10</td>
+        <td class='tbright'>5</td>
+        <td class='tbright'>6</td>
+        <td class='tbright'>4</td>
+        <td class='tbright'>10</td>
+        <td class='tbright'>40</td>
+        <td class='tbright'>75</td>    
+    </td>
+</table>
+</div>
+  </form>
+</span>
+ 
+</body>
+</html>
+

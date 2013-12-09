@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<style>
+#content{
+	border-top:2px solid #11a3ff;      
+	border-left:2px solid #11a3ff;      /*大边框宽度*/
+	border-right:2px solid #11a3ff;
+	border-bottom:2x solid #11a3ff;
+	
+	padding:10px;/*整体内容与大边框的距离*/
+	font-size:22px;/*内容（字）的大小*/
+}</style>
+</style>
+</head>
+
+<body background="../image/时间.jpg">
+
+<p>您的使用时间：</p>
+<p>&nbsp;</p>
+<div id="Clock" align="center" style="font-size: 10; color:#000000"  >
+  
+</div> 
+<p>
+  <script>
+function tick() {
+var hours, minutes, seconds, xfile;
+var intHours, intMinutes, intSeconds;
+var today;
+today = new Date();
+intHours = today.getHours();
+intMinutes = today.getMinutes();
+intSeconds = today.getSeconds();
+if (intHours == 0) {
+hours = "12:";
+xfile = "午夜";
+} else if (intHours < 12) {
+hours = intHours+":";
+xfile = "上午";
+} else if (intHours == 12) {
+hours = "12:";
+xfile = "正午";
+} else {
+intHours = intHours - 12
+hours = intHours + ":";
+xfile = "下午";
+}
+if (intMinutes < 10) {
+minutes = "0"+intMinutes+":";
+} else {
+minutes = intMinutes+":";
+}
+if (intSeconds < 10) {
+seconds = "0"+intSeconds+" ";
+} else {
+seconds = intSeconds+" ";
+}
+timeString = xfile+hours+minutes+seconds;
+Clock.innerHTML = timeString;
+window.setTimeout("tick();", 100);
+}
+window.onload = tick;
+</script>
+</p>
+<p>&nbsp;</p>
+
+<h1>&nbsp;&nbsp;&nbsp;&nbsp;考试需知</h1>
+<div class="content"><textarea name="考试须知" cols="33" rows="24" wrap="virtual">一、考生应诚信应考，并自觉服从监考员等考试工作人员管理，不得以任何理由妨碍监考员等考试工作人员履行职责，不得扰乱考场及其他考试工作地点的秩序。
+二、考生凭准考证、有效身份证件和考试通知单，按规定时间和地点参加考试。
+三、考生入场，除2B铅笔、0.5mm黑色墨水签字笔、橡皮、直尺、圆规、三角板外（其他科目有特殊规定的除外），其他任何物品不准带入考场。
+严禁携带具有发送或者接收信息功能的设备、电子存储记忆录放设备以及涂改液、修正带等物品进入考场。允许使用计算器的课程，计算器也不得有程序储存功能。
+考场内不得自行传递文具、用品等。
+四、考生入场后，要按号入座，将本人准考证、有效身份证件和考试通知单放在课桌上以便核验。考生领到答题卡和试题后，应在指定位置和规定的时间内准确清楚地填涂姓名、准考证号、座位号等栏目。凡漏填、错填或字迹不清的答题卡无效。
+遇试题分发错误及试题字迹不清等问题，可举手询问；涉及试题内容的疑问，不得向监考员询问。
+五、统一开考信号发出后才能开始答题。
+六、迟到15分钟后考生不准进入考点参加当科课程考试，交卷出场时间不得早于每课程考试结束前30分钟，交卷出场后不得再进场续考，也不得在考场附近逗留或交谈。
+七、考生必须在答题卡规定的区域答题，不准用规定以外的笔和纸答题，不准在答题卡上作任何标记。
+八、考生在考场内须保持安静，不准吸烟，不准喧哗，不准交头接耳、左顾右盼、打手势、做暗号，不准夹带、旁窥、抄袭或有意让他人抄答案或交换试题、答题卡，不准将答题卡、试题或草稿纸带出考场。
+九、考试结束信号发出后，考生应立即停止答卷，根据监考员指令依次退出考场，不准在考场附近逗留。
+十、对不遵守考场纪律，不服从考试工作人员管理，有违纪、作弊等行为的考生，将按照《国家教育考试违规处理办法》（教育部33号令）进行处理并记入考生诚信考试电子档案。</textarea>
+</div>
+
+</body>
+</html>
+

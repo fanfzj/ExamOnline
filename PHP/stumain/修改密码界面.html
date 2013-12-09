@@ -1,0 +1,106 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>无标题文档</title>
+<link href="../css/8-9.css" type="text/css" rel="stylesheet" />
+<style type="text/css">
+<!--------
+#leftpic{
+	
+	width:160px;
+	float:left;
+	padding-right:15px;
+}
+#leftpic a:link,#leftpic a:visited{
+	color:#CF6;
+	text-decoration:none;
+}
+#leftpic a:hover{
+	
+	color:#000000;
+	text-decoration:underline;
+	}
+img{
+	border:1px solid #069;
+	margin-bottom:5px;
+}
+ul#list{
+	
+	list-style-type:none;
+	margin:0px;
+	padding:5px 0px 5px 2px;
+}
+ul#list li{
+	line-height:18px;
+}
+ul#list li a:link{
+	color:#000;
+	text-decoration:none;
+}
+ul#list li a:visited{
+	color#333;
+	text-decoration:none;
+}
+ul#list li a:hover{
+	color:#03F;
+	text-decoration:underline;
+}
+</style>
+</head>
+<body id="ma">
+<ul id="tabnav">
+      <li class="st"><a href="学生主界面右界面.html">试题查询</a></li>
+      <li class="grzl"><a href="student.php" >个人资料</a></li>
+     <li class="cj"><a href="成绩查询界面.html">成绩查询</a></li>
+      <li class="ma"><a href="修改密码界面.html">修改密码</a></li>
+      <li class="bk"><a href="补考查询界面.html">补考查询</a></li>
+    
+</ul>
+<div id="content">
+  <span id="leftpic">
+<form action="upsetpwd.php" method="post" onsubmit="return anagin(form)">
+<table>
+  <tr><td width="150">旧密码 ：</td><td>
+      <input type="password" name="pwd" id="textfield" /></td></tr>
+  <tr><td>新密码 ：</td><td><input type="password" name="textfield2" id="textfield2" />
+</td></tr>
+<tr><td>重复新密码：</td><td>
+      <input name="textfield3" align="center" type="password" id="textfield3"/></td></tr>
+<tr><td colspan=1>
+<style>
+span{width:50%;text-align:center;};
+</style>
+<span>
+ <input type="submit" name="button" id="button" value="执行" />
+ </span>
+ </td>
+ <td colspan=1>
+ <style>
+span{width:50%;text-align:center;};
+</style>
+ <span>
+      <input type="reset" name="button2" id="button2" value="重置" />
+      </span>
+      </td></tr>
+    </table>
+  </p>
+</form>
+</span>
+</div>
+
+<script language="javascript" type="text/javascript">
+  function again(form)
+ {
+	if(form.textfield2.value!=form.textfield3.value) 
+	{
+		alert("密码不同，请重新输入");
+		form.textfield2.select();            //返回新密码文本框
+		return (false);
+	}
+	return (true);
+ }
+</script>
+</body>
+</html>
+

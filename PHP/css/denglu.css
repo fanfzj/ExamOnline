@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+body{
+	font-size: 14px;
+	background-position: left;
+	font-family: Verdana, Geneva, sans-serif;
+    font-weight: bold;
+}
+.main{
+	
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+}
+.jiemiandiv{
+     width: 450px;
+    margin-left: 450px;
+	margin-top:150px;
+	height: 240px;
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	text-align:center;/*居中(新增属性)*/
+	white-space:nowrap;/*强制不换行(新增属性)*/}
+	}
+.dengmenu{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	margin-top:1px;
+	margin-left:8px;
+	}
+tr td th strong{
+	font-family: Verdana, Geneva, sans-serif;
+	font-size: 20px;
+	font-weight: bold;}
+td,th {
+	font-size: 14px;
+	background-position: center center;
+	font-family: Verdana, Geneva, sans-serif;
+	background-image: url(image/backgroud);
+	font-weight: bold;
+}
+.beijing{
+
+	background-attachment:inherit;
+	background-repeat:no-repeat;
+	background-image:url(未标题-3.jpg);}
