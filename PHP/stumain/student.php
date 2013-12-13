@@ -19,11 +19,15 @@
 #leftpic a:link,#leftpic a:visited{
 	color:#006eb3;
 	text-decoration:none;
+	text-align:center;/*居中(新增属性)*/
+	white-space:nowrap;/*强制不换行(新增属性)*/}
 }
 #leftpic a:hover{
 	
 	color:#000000;
 	text-decoration:underline;
+	text-align:center;/*居中(新增属性)*/
+	white-space:nowrap;/*强制不换行(新增属性)*/}
 	}
 img{
 	border:1px solid #069;
@@ -57,25 +61,32 @@ ul#list li a:hover{
 <body id="grzl">
 <?php
    include ("../conn/conn.php");
-
+      //$use=$_SESSION["unc"];
+   $use="fanfzj";
 ?>
 <ul id="tabnav">
       <li class="st"><a href="学生主界面右界面.html">试题查询</a></li>
       <li class="grzl"><a href="student.php" target="_self">个人资料</a></li>
-     <li class="cj"><a href="成绩查询界面.html">成绩查询</a></li>
+     <li class="cj"><a href="examscore.php">成绩查询</a></li>
       <li class="ma"><a href="修改密码界面.html">修改密码</a></li>
       <li class="bk"><a href="补考查询界面.html">补考查询</a></li>
 </ul>
 <div id="content">
   <span id="leftpic">
-   <form action="upset.php" method="post">
-     <table width="971" height="383" border="1" cellpadding="0" cellspacing="0">
+   <form action="upset.php" method="post" enctype="multipart/form-data">
+     <table width="950" height="383" border="1" cellpadding="0" cellspacing="0">
        <tr>
-         <th colspan="2" rowspan="5">照片</th>
+         <th colspan="1" rowspan="5">照片
+<?php /*?>            <?php
+		     $photo=mysql_query("select photo from user where user='fanfzj'");
+			 $aphoto= mysql_fetch_array($sno);
+			 echo "<input type='image' name='photo' value='".$asno[0]."'>";
+		 ?><?php */?>
+        </th>
          <th width="201" scope="col">学号：</th>
          <th width="180" scope="col">
          <?php
-		     $sno=mysql_query("select sno from user where user='fanfzj'");
+		     $sno=mysql_query("select sno from user where user='$use'");
 			 $asno= mysql_fetch_array($sno);
 			 echo "<input type='text' name='sno' value='".$asno[0]."'>";
 		 ?>
@@ -161,7 +172,7 @@ ul#list li a:hover{
 			 $rs = mysql_query("select bjname from db_bj");
              while($arr = mysql_fetch_array($rs))
 			 {
-				 echo "<option>".$arr[$i]. "</option>";
+				 echo "<option>".$arr[$i]."</option>";
 			 }
 			 ?>
          </select></th>
@@ -179,8 +190,12 @@ ul#list li a:hover{
        </tr>
        
        <tr>
-         <td colspan="4"bordercolor="#FFFFFF"  bgcolor="#00FF66">
-        <input type="submit" id="button" value="登录" />
+        <td colspan="2"bordercolor="#FFFFFF"  bgcolor="#00FF66">
+        <label for="file"></label>
+         <input type="file" name="file" id="file" /> 
+         </td>
+         <td colspan="2"bordercolor="#FFFFFF"  bgcolor="#00FF66">
+        <input type="submit" id="button" value="提交" />
         </td>
          <td colspan="2"bordercolor="#FFFFFF"  bgcolor="#00FF66">
         <input name="button1" type="reset" value="重置" />

@@ -14,7 +14,8 @@
    //获取注册的用户名
    //判断指定的用户名是否存在
    $sql=mysql_query("select * from tea_user where user='".$use."'");
-   if($sql!=false)   //按指定条件检索
+ 	$arr=mysql_fetch_array($sql);
+	if($arr[0]=="")   //按指定条件检索
    {
 	echo "<script language='javascript'>alert('用户名不正确');history.back();</script>";
 	exit; 

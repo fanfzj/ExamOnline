@@ -10,7 +10,7 @@ $truepwd=trim($_POST['pwd']);
 $pwd=md5($truepwd);
 $password=trim($_POST['textfield2']);
 $newpwd=md5($password);
-if(mysql_query("select truepwd='".$truepwd."' from stu_user where user='fanfzj'"))
+if(mysql_query("select pwd='".$pwd."' from stu_user where user='fanfzj'"))
 {
 	if(mysql_query("UPDATE stu_user SET pwd='".$newpwd."',truepwd='".$password."' WHERE user='fanfzj'"))
 	//WHERE user='".$_SESSION["unc"]."'
@@ -20,7 +20,6 @@ if(mysql_query("select truepwd='".$truepwd."' from stu_user where user='fanfzj'"
 else echo "<script>alert('密码修改失败！');history.back();</script>";
 }
 else echo "<script>alert('密码错误！');history.back();</script>";
-
 ?>
 <body>
 </body>

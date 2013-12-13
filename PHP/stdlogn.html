@@ -11,7 +11,7 @@
 </head>
 <body style="background:url(image/backgroud1.jpg)">
   <div class="jiemiandiv">
-  <form action="lognstusave.php" method="post" onsubmit="return chkinput(form)"/>
+  <form action="lognstusave.php" method="post" onsubmit="return chickinput(form)" >
     <table background="image/backgroud2.jpg"height="241" border="0" class="dengmenu" >
       <tr>
          <td width="150" height="17">
@@ -38,9 +38,10 @@
       </tr>
     </table>
 </form>
-</div>       
+
+</div> 
 <script language="javascript" type="text/javascript">
-   function chkinput(form)              //定义一个判断函数
+   function chickinput(form)              //定义一个判断函数
    {
 	  if(form.username.value=="")  
 	  //判断username文本框中的只是否为空
@@ -57,6 +58,6 @@
 	  }
 	   return (true);                   //提交表单
    }
-</script>
+</script>      
 </body>
 </html>

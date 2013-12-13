@@ -10,17 +10,20 @@
  $usename=trim($_POST['username']);
  $truepwd=trim($_POST['pwd']);
  $pwd=md5($truepwd);
-  session_start();                     //初始化session变量
+ //echo $usename ." <br> ". $truepwd ." <br> ". $pwd;
+  
    //获取注册的用户名
    //判断指定的用户名是否存在
     $sql=mysql_query("select * from stu_user where user='".$usename."'");
-   if($sql!=false)   //按指定条件检索
+	$arr=mysql_fetch_array($sql);
+	if($arr[0]=="")   //按指定条件检索
    {
 	echo "<script language='javascript'>alert('用户名不正确');history.back();</script>";
 	exit; 
     }
-	if(mysql_query("select truepwd='".$truepwd."' from stu_user where user='".$use."'",$conn))
+	if(mysql_query("select pwd='".$pwd."' from stu_user where user='".$use."'"))
 	{
+	session_start();                     //初始化session变量
 	$_SESSION["unc"]=$use;
 	echo "<script>alert('登陆成功！');window.location.href='stumain/index.html';</script>";
    }

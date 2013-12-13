@@ -1,0 +1,120 @@
+@charset "utf-8";
+/* CSS Document */
+#t{
+	width:750px;
+	height:90%;
+	margin-top:20px;
+	margin-left:0px;
+
+	border-top:1px solid #11a3ff; 
+	border-left:1px solid #11a3ff;      /*大边框宽度*/
+	border-right:1px solid #11a3ff;
+	border-bottom:1px solid #11a3ff;
+	padding:15px;/*整体内容与大边框的距离*/
+	font-size:22px;/*内容（字）的大小*/
+	}
+#content{
+	
+	width:85%;
+	height:200px;
+	margin-top:20px;
+	margin-left:50px;
+	
+	border-top:1px solid #11a3ff; 
+	border-left:1px solid #11a3ff;      /*大边框宽度*/
+	border-right:1px solid #11a3ff;
+	border-bottom:1px solid #11a3ff;
+	padding:10px;/*整体内容与大边框的距离*/
+	font-size:12px;/*内容（字）的大小*/
+	}
+#pdanswer{
+	
+	width:20%;
+	height:50px;
+	margin-top:20px;
+	margin-left:50px;
+	border-top:1px solid #11a3ff; 
+	border-left:1px solid #11a3ff;      /*大边框宽度*/
+	border-right:1px solid #11a3ff;
+	border-bottom:1px solid #11a3ff;
+	padding:10px;/*整体内容与大边框的距离*/
+	font-size:12px;/*内容（字）的大小*/
+	}
+#dxanswer{
+	width:85%;
+	height:50px;
+	margin-top:20px;
+	margin-left:50px;
+	border-top:2px solid #11a3ff; 
+	border-left:2px solid #11a3ff;      /*大边框宽度*/
+	border-right:2px solid #11a3ff;
+	border-bottom:2px solid #11a3ff;
+	padding:10px;/*整体内容与大边框的距离*/
+	font-size:28px;/*内容（字）的大小*/
+	}
+#tkanswer{
+	width:60%;
+	height:15%;
+	margin-top:20px;
+	margin-left:50px;
+	border-top:1px solid #11a3ff; 
+	border-left:1px solid #11a3ff;      /*大边框宽度*/
+	border-right:1px solid #11a3ff;
+	border-bottom:1px solid #11a3ff;
+	padding:10px;/*整体内容与大边框的距离*/
+	font-size:12px;/*内容（字）的大小*/
+	}
+#pxanswer{
+	width:80%;
+	height:5%;
+	margin-top:0px;
+	margin-left:50px;
+	border-top:0px solid #11a3ff; 
+	border-left:1px solid #11a3ff;      /*大边框宽度*/
+	border-right:1px solid #11a3ff;
+	border-bottom:1px solid #11a3ff;
+	padding:10px;/*整体内容与大边框的距离*/
+	font-size:50px;/*内容（字）的大小*/
+	}
+#jdanswer{
+	width:80%;
+	height:20%;
+	margin-top:0px;
+	margin-left:50px;
+	border-top:0px solid #11a3ff; 
+	border-left:1px solid #11a3ff;      /*大边框宽度*/
+	border-right:1px solid #11a3ff;
+	border-bottom:1px solid #11a3ff;
+	padding:10px;/*整体内容与大边框的距离*/
+	font-size:50px;/*内容（字）的大小*/
+	}
+#xzanswer{	
+	width:80%;
+	height:50px;
+	margin-top:20px;
+	margin-left:50px;
+	border-top:2px solid #11a3ff; 
+	border-left:2px solid #11a3ff;      /*大边框宽度*/
+	border-right:2px solid #11a3ff;
+	border-bottom:2px solid #11a3ff;
+	padding:10px;/*整体内容与大边框的距离*/
+	font-size:30px;/*内容（字）的大小*/
+	}		
+#con{width:700px;
+	height:100px;
+	margin-top:20px;
+	margin-left:30px;
+	
+	border-top:1px solid #11a3ff; 
+	border-left:1px solid #11a3ff;      /*大边框宽度*/
+	border-right:1px solid #11a3ff;
+	border-bottom:1px solid #11a3ff;
+	padding:10px;/*整体内容与大边框的距离*/
+	font-size:12px;/*内容（字）的大小*/
+	
+	}
+
+#t p {
+	font-family: "汉仪娃娃篆简";
+	font-weight: bold;
+}

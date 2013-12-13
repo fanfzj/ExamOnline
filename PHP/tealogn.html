@@ -11,15 +11,14 @@
 </head>
 <body style="background:url(image/backgroud3.jpg)">
   <div class="jiemiandiv">
-  <form action="lognteasave.php" method="post" onsubmit="return chkinput(form)"/>
+  <form action="lognteasave.php"  method="post" onsubmit="return chickinput(form)">
     <table background="image/学习.jpg"height="241" border="0" class="dengmenu" >
       <tr>
          <td width="150" height="17">
          老师</td>                
-        <td  width="150" height="17"> <a href="stdlogn.html" target="_top">学生</a> </td>
-       
+        <td  width="150" height="17"> <a href="stdlogn.php" target="_top">学生</a> </td>
       </tr >
-    
+ 
       <tr>
         <td width="150" height="57">用户名(TeaUser): </td>
         <td width="227"><input name="username" type="text"/></td>
@@ -39,7 +38,7 @@
 </form>
 </div>       
 <script language="javascript" type="text/javascript">
-   function chkinput(form)              //定义一个判断函数
+   function chickinput(form)              //定义一个判断函数
    {
 	  if(form.username.value=="")            
 	  //判断username文本框中的只是否为空
