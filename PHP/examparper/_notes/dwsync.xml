@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <dwsync>
-<file name="index.html" server="D:/WWW/" local="130313017840000000" remote="130313017840000000" Dst="0" />
-<file name="top.php" server="D:/WWW/" local="130313140550000000" remote="130313140550000000" Dst="0" />
-<file name="left.html" server="D:/WWW/" local="130313357070000000" remote="130313357070000000" Dst="0" />
-<file name="mid.html" server="D:/WWW/" local="130281353280000000" remote="130281353280000000" Dst="0" />
-<file name="时间.html" server="D:/WWW/" local="130310711520000000" remote="130310711520000000" Dst="0" />
+<file name="index.html" server="D:/WWW/" local="130318521913676747" remote="130318521910000000" Dst="0" />
+<file name="top.php" server="D:/WWW/" local="130318470056280673" remote="130318470050000000" Dst="0" />
+<file name="left.html" server="D:/WWW/" local="130318470353777689" remote="130318470350000000" Dst="0" />
+<file name="mid.html" server="D:/WWW/" local="130318471249088898" remote="130318471240000000" Dst="0" />
+<file name="pd.php" server="D:/WWW/" local="130318488786171962" remote="130318488780000000" Dst="0" />
+<file name="pdsave.php" server="D:/WWW/" local="130318486043345081" remote="130318486040000000" Dst="0" />
+<file name="time.php" server="D:/WWW/" local="130318538054649958" remote="130318538050000000" Dst="0" />
+<file name="clock.php" server="D:/WWW/" local="130318516450534273" remote="130318516450000000" Dst="0" />
+<file name="oclock.php" server="D:/WWW/" local="130318533856909861" remote="130318533850000000" Dst="0" />
+<file name="uptime.php" server="D:/WWW/" local="130318536964567608" remote="130318536960000000" Dst="0" />
 </dwsync>
