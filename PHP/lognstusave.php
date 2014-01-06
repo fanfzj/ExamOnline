@@ -7,24 +7,25 @@
 <body>
 <?php
  include ("conn/conn.php");   //连接数据库
- $usename=trim($_POST['username']);
- $truepwd=trim($_POST['pwd']);
+ $user=trim($_POST['username']);
+ $truepwd=trim($_POST['password']);
  $pwd=md5($truepwd);
- //echo $usename ." <br> ". $truepwd ." <br> ". $pwd;
-  
    //获取注册的用户名
    //判断指定的用户名是否存在
-    $sql=mysql_query("select * from stu_user where user='".$usename."'");
+    $sql=mysql_query("select * from stu_user where user='".$user."'");
 	$arr=mysql_fetch_array($sql);
-	if($arr[0]=="")   //按指定条件检索
+	//echo $arr[0]." <br> 4 ";
+	if($arr=="")   //按指定条件检索
    {
 	echo "<script language='javascript'>alert('用户名不正确');history.back();</script>";
 	exit; 
     }
-	if(mysql_query("select pwd='".$pwd."' from stu_user where user='".$use."'"))
-	{
+	$a=mysql_query("select pwd='".$pwd."',truepwd='".$truepwd."' from stu_user where user='".$user."'",$conn);
+	$as=mysql_fetch_array($a);
+    if($as[0]==1)
+{
 	session_start();                     //初始化session变量
-	$_SESSION["unc"]=$use;
+	$_SESSION['use']=$user;
 	echo "<script>alert('登陆成功！');window.location.href='stumain/index.html';</script>";
    }
    else{

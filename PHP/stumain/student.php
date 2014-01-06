@@ -1,7 +1,4 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<?php    
-   session_start(); 
-?>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -57,15 +54,13 @@ ul#list li a:hover{
 }
 </style>
 </head>
-
 <body id="grzl">
 <?php
-   include ("../conn/conn.php");
-      //$use=$_SESSION["unc"];
-   $use="fanfzj";
+   include ("../conn/conn.php");   //连接数据库
+   include ("../conn/session.php");
 ?>
 <ul id="tabnav">
-      <li class="st"><a href="学生主界面右界面.html">试题查询</a></li>
+      <li class="st"><a href="rightframe.php">试题查询</a></li>
       <li class="grzl"><a href="student.php" target="_self">个人资料</a></li>
      <li class="cj"><a href="examscore.php">成绩查询</a></li>
       <li class="ma"><a href="修改密码界面.html">修改密码</a></li>
@@ -73,7 +68,7 @@ ul#list li a:hover{
 </ul>
 <div id="content">
   <span id="leftpic">
-   <form action="upset.php" method="post" enctype="multipart/form-data">
+   <form action="upset.php?<?=session_name();?>=<?=session_id();?>" method="post" enctype="multipart/form-data">
      <table width="950" height="383" border="1" cellpadding="0" cellspacing="0">
        <tr>
          <th colspan="1" rowspan="5">照片
@@ -86,7 +81,7 @@ ul#list li a:hover{
          <th width="201" scope="col">学号：</th>
          <th width="180" scope="col">
          <?php
-		     $sno=mysql_query("select sno from user where user='$use'");
+		     $sno=mysql_query("select sno from user where user='".$user."'");
 			 $asno= mysql_fetch_array($sno);
 			 echo "<input type='text' name='sno' value='".$asno[0]."'>";
 		 ?>
@@ -138,13 +133,23 @@ ul#list li a:hover{
 			 ?>
 			</th>
          <th>学院：</th>
-         <th><select name="xy" method="post"/>
+         <th><select name="xy" method="post" />
           <?php 
 			 $i=0;
 			 $rs = mysql_query("select xyname from db_xy");
+			 $xy=mysql_query("select xy from user where sno='".$asno[0]."'");
+             $axy=mysql_fetch_array($xy);	
+             $xyid=mysql_query("select xyid from db_xy where xyname='".$axy[0]."'");	
+             $axyid=mysql_fetch_array($xyid);
 			 while($arr = mysql_fetch_array($rs))
 			 {
+				 if($axy[0]==$arr[$i])
+				 {
+					 echo "<option selected='selected'>".$arr[$i]."</option>";
+				 }
+				 else{
 		      echo "<option>".$arr[$i]."</option>";
+				 }
 			 }
           ?>
              </select>
@@ -152,15 +157,23 @@ ul#list li a:hover{
        </tr>
        <tr>
          <th>专业：</th>
-         <th><select name="zy" />
+         <th><select name="zy" c />
          	 <?php 
-			 $xy=trim($_POST['xy']);
-			 $xyid=mysql_query("select xyid from db_xy where xyname='".$xy."'");
+			 $zy=mysql_query("select zy from user where sno='".$asno[0]."'");
+			 $azy=mysql_fetch_array($zy);//从学生表中获取专业
+			 echo $axyid[0];
 			 $i=0;
-			 $rs = mysql_query("select zyname from db_zy where xyid=1");
+			 $rs = mysql_query("select zyname from db_zy where xyid='".$axyid[0]."'");
 			 while($arr = mysql_fetch_array($rs))
 			 {
+				if($arr[$i]==$azy[0])
+				 {
+					 echo "<option selected='selected'>". $arr[$i]. "</option>";
+				}
+				else{
 				 echo "<option>". $arr[$i]. "</option>";
+			    }
+				 /*echo "<option>". $arr[$i]. "</option>";*/
 			 }
 			 ?></select>
              </th>
@@ -170,9 +183,17 @@ ul#list li a:hover{
          <?php 
 			 $i=0;
 			 $rs = mysql_query("select bjname from db_bj");
+			 $bj=mysql_query("select bj from user where sno='".$asno[0]."'");
+			 $abj=mysql_fetch_array($bj);
              while($arr = mysql_fetch_array($rs))
 			 {
+				 if($abj[0]==$arr[$i])
+				 {
+					 echo "<option selected='selected'>".$arr[$i]."</option>";
+				}
+				else{
 				 echo "<option>".$arr[$i]."</option>";
+				}
 			 }
 			 ?>
          </select></th>

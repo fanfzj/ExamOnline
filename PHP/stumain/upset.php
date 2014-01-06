@@ -6,7 +6,8 @@
 </head>
 <body>
 <?php
-include ("../conn/conn.php");
+   include ("../conn/conn.php");   //连接数据库
+   include ("../conn/session.php");
 ?>
 <?php /*?><?php
 If($photo!= "none") {   
@@ -26,18 +27,9 @@ $nation=trim($_POST['mz']);
 $xy=trim($_POST['xy']);
 $zy=trim($_POST['zy']);
 $bj=trim($_POST['bj']);
-$xyid=mysql_query("select xyid from db_xy where xyname='".$xy."'");
-$axyid= mysql_fetch_array($xyid);
-$bxyid=$axyid[0];
-$zyid=mysql_query("select zyid from db_zy where zyname='".$zy."'");
-$azyid= mysql_fetch_array($zyid);
-$bzyid=$azyid[0];
-$bjid=mysql_query("select bjid from db_bj where bjname='".$bj."'");
-$abjid= mysql_fetch_array($bjid);
-$bbjid=$abjid[0];
 $ID_number=trim($_POST['idnumber']);
 echo $sno ."<br>".$username."<br>".$sex."<br>".$datatime."<br>".$nation."<br>".$xy."<br>".$zy."<br>".$bj."<br>".$ID_number."<br>";
-if(mysql_query("UPDATE user SET sno='".$sno."',name='".$username."', sex='".$sex."',birthday='".$datatime."',nation='".$nation."',xyid='".$bxyid."',zyid='".$bzyid."',bjid='".$bbjid."',ID_number='".$ID_number."' WHERE user='fanfzj'"))
+if(mysql_query("UPDATE user SET sno='".$sno."',name='".$username."', sex='".$sex."',birthday='".$datatime."',nation='".$nation."',xy='".$xy."',zy='".$zy."',bj='".$bj."',ID_number='".$ID_number."' WHERE user='".$user."'"))
 {
 	echo "<script>alert('个人资料修改成功！');history.back();</script>";
 }

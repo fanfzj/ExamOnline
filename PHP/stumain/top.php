@@ -10,7 +10,7 @@
 }
 </style>
 </head>
-<?php
+   <?php
    include ("../conn/conn.php");   //连接数据库
    include ("../conn/session.php");
 ?>
@@ -26,23 +26,17 @@
 		 ?>
 		</th>
         <th width="360" bgcolor="#339900" scope="col">专业：
-         	 <?php 
-			$xy=mysql_query("select xy from user where user='".$user."'");
+         <?php 
+			 $xy=mysql_query("select xy from user where user='".$user."'");
 			 $axy=mysql_fetch_array($xy);
 			 echo $axy[0];
-			 ?>
+		 ?>
       <th width="300" bgcolor="#9900CC" scope="col">学号：
          <?php
 			 echo $asno[0];
 		 ?>
-      <th width="298" bgcolor="#666600"  scope="col">考试项目：
-         <?php
-         $rs = mysql_query ("select km from exam_sj where sj='".$sj."'");
-		 $arr = mysql_fetch_array($rs);
-		 echo $arr[0];
-		 ?>
          </th>
-    </tr>
+       </tr>
     </table>
 </body>
 </html>

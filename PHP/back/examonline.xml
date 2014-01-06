@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<mysql xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<name name="examonline">
+<name name="db_bj">
+	<row><id>1</id><bjid>1</bjid><bjname>1班</bjname></row>
+	<row><id>2</id><bjid>2</bjid><bjname>2班</bjname></row>
+</name>
+<name name="db_xy">
+	<row><id>1</id><xyid>1</xyid><xyname>计算机科学与控制工程学院</xyname></row>
+	<row><id>2</id><xyid>2</xyid><xyname>理学院</xyname></row>
+</name>
+<name name="db_zy">
+	<row><id>1</id><zyid>1</zyid><zyname>计算机科学与技术</zyname><xyid>1</xyid></row>
+	<row><id>2</id><zyid>2</zyid><zyname>软件工程</zyname><xyid>1</xyid></row>
+</name>
+<name name="exam_pd">
+	<row><Id>1</Id><pdid>1</pdid><pd>对与错</pd><answer>T</answer></row>
+	<row><Id>2</Id><pdid>1</pdid><pd>好与坏</pd><answer>T</answer></row>
+</name>
+<name name="exam_score">
+	<row><id>1</id><sno>2012021039</sno><km>JAVA</km><tk>10</tk><xz>10</xz><dx>10</dx><px>10</px><pd>20</pd><jd>20</jd><score>80</score></row>
+	<row><id>2</id><sno>2012021039</sno><km>英语</km><tk>5</tk><xz>5</xz><dx>5</dx><px>20</px><pd>10</pd><jd>20</jd><score>65</score></row>
+	<row><id>3</id><sno>2012021039</sno><km>c++</km><tk>5</tk><xz>20</xz><dx>10</dx><px>30</px><pd>10</pd><jd>20</jd><score>95</score></row>
+</name>
+<name name="stu_user">
+	<row><id>1</id><user>fanfzj</user><pwd>6400dd70fbe6646e53834320cc6c1ac1</pwd><truepwd>you123123</truepwd></row>
+</name>
+<name name="tea_user">
+	<row><id>1</id><user>root</user><pwd>63a9f0ea7bb98050796b649e85481845</pwd><truepwd>root</truepwd></row>
+</name>
+<name name="user">
+	<row><id>1</id><user>fanfzj</user><sno>2012021039</sno><name>范志俊</name><sex>男</sex><birthday>1992-11-28</birthday><nation>汉族</nation><xyid>1</xyid><zyid>1</zyid><bjid>2</bjid><ID_number>310102199211284413</ID_number><photo></photo></row>
+</name>
+</name>
+</mysql>

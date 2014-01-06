@@ -11,61 +11,109 @@
   function showTime(){
      d = new Date();                               
      var s = "";
-                     
-     s += (d.getMonth() + 1)   +   "-";            
-     s += d.getDate() + " ";                       
      s += d.getHours() + ":";                      
      s += d.getMinutes() + ":";                     
-     s += d.getSeconds() + ":";                    
-     s += d.getMilliseconds();                      
+     s += d.getSeconds() ;                                        
   
      document.getElementById("starttime").value = s;    
      document.getElementById("endtime").value = "";     
-     document.getElementById("interval").value = "";    
+     document.getElementById("interval").value = "";  
+	 var txtUser = document.getElementById("txt");
+	 return s;  
   }
 
   //获取结束时间
   function showTime2(){
      d1 = new Date();   
      var s1 = "";
-      
-     s1 += (d1.getMonth() + 1) + "-";  
-     s1 += d1.getDate() + " "; 
      s1 += d1.getHours() + ":";
      s1 += d1.getMinutes() + ":";
-     s1 += d1.getSeconds() + ":";
-     s1 += d1.getMilliseconds();
+     s1 += d1.getSeconds() ;
  
      document.getElementById("endtime").value = s1;
      document.getElementById("interval").value = ""; 
+	 return s1;  
   }
 
   //计算时间差
   function showInterval(){
-  
+   var txtTime = document.getElementById("interval");
+    if(txtTime != null) {
    var sjc = ((d1.getTime()-d.getTime())/1000);
      if(sjc <= 0){
        alert("结束时间不能比开始时间早！"); 
     }else{
        document.getElementById("interval").value = sjc + "秒";   
     }
+	return sjc;
+  }
   }
  </script>
  </head>
  
  <body><div>
-  <p>
-    <input type="button" value="开始时间" onclick="showTime()" />
-    <input type="text" id="starttime" /><br>
-    
-    <input type="button" value="结束时间" onclick="showTime2()" />
-    <input type="text" id="endtime" /><br>
-    
-    <input type="button" value="时间差" onclick="showInterval()"/>
-    <input type="text" id="interval" />
-  </p>
-  <p>&nbsp;</p></div>
- </body>
+<?php
+    header("Content-type: image/png");
+
+$hour = date('h');
+//获得小时
+$min = date('i');
+//获得分钟
+$p = 3.14159;
+//定义PI值
+$th = ((30*$hour)+$min/2)*((2*$p)/360);
+$tm = ($min*6)*((2*$p)/360);
+//换算图形化时钟上时针和分针所在的位置
+
+$image = imagecreate(200,200);
+//创建图像
+$colorbk = imagecolorallocate($image,200,200,200);
+//设置背景色
+$color = imagecolorallocate($image,225,0,0);
+//设置前景色
+    $colorY = imagecolorallocate($image,225,0,255);
+//设置字体颜色
+$colorGreen = imagecolorallocate($image,0,225,0);
+    //设置表盘边框颜色
+$colorBlue = imagecolorallocate($image,0,0,225);
+//设置表盘颜色
+
+imagefill($image,0,0,$colorbk);
+//用背景色填充图像
+
+for($i=0;$i<12;$i++){
+//绘制表盘
+$a = $i*$p/6;                        // (      说是这行错误  )
+ $x =100 + sin($a)*100;
+ $y =100 - cos($a)*100;
+//画圆弧
+ imagearc ($image, $x, $y, 5, 5, 0, 360, $color);
+//在图上书写字符串
+ imagestring($image, 4, $x, $y, $i, $color);
+}
+
+ imagearc($image,100,100,200,200,0,360,$colorGreen);
+ //填充
+ //imagefill($image,100,100,$colorBlue);
+
+ imagearc($image,100,100,10,10,0,360,$color);
+ imagefill($image,100,100,$color);
+
+//画线
+ $x_h=100+sin($th)*60;
+ $y_h=100-cos($th)*60;
+ imageline($image,100,100,$x_h,$y_h,$color);
+
+ $x_m =100+sin($tm)*80;
+ $y_m =100-cos($tm)*80;
+ imageline($image,100,100,$x_m,$y_m,$color);
+
+ //显示图像
+ imagepng($image);
+ //释放图像占用的资源
+ imagedestroy($image);
+
+?>
  
 <html>
 

@@ -20,7 +20,9 @@
 	echo "<script language='javascript'>alert('用户名不正确');history.back();</script>";
 	exit; 
     }
-	if(mysql_query("select pwd='".$truepwd."' from tea_user where user='".$use."'",$conn))
+	$t=mysql_query("select truepwd='".$truepwd."',pwd='".$pwd."' from tea_user where user='".$use."'",$conn);
+	$at=mysql_fetch_array($t);
+    if($at[0]==1)
 	{
 	session_register("unc");
 	$_SESSION["unc"]=$use;

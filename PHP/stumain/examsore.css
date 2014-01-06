@@ -1,13 +1,14 @@
+@charset "utf-8";
+/* CSS Document */
 body{
 	margin:10px;
 }
 #content{
-	border-left:1px solid #11a3ff;      /*´ó±ß¿ò¿í¶È*/
+	border-left:1px solid #11a3ff;      /*å¤§è¾¹æ¡†å®½åº¦*/
 	border-right:1px solid #11a3ff;
 	border-bottom:1px solid #11a3ff;
-	padding:15px;/*ÕûÌåÄÚÈİÓë´ó±ß¿òµÄ¾àÀë*/
-	font-size:22px;/*ÄÚÈİ£¨×Ö£©µÄ´óĞ¡*/
-
+	padding:15px;/*æ•´ä½“å†…å®¹ä¸å¤§è¾¹æ¡†çš„è·ç¦»*/
+	font-size:22px;/*å†…å®¹ï¼ˆå­—ï¼‰çš„å¤§å°*/
 }
 ul#tabnav{
 	list-style-type:none;
@@ -21,8 +22,8 @@ ul#tabnav li{
 	float:left;
 	height:22px;
 	background-color:#a3dbff;
-	margin:0px 3px 0px 0px;/*Ğ¡±êÌâµÄ¾àÀë*/
-	border:1px solid #11a3ff;/*Ğ¡±êÌâ±ß¿òµÄ´ÖÏ¸*/
+	margin:0px 3px 0px 0px;/*å°æ ‡é¢˜çš„è·ç¦»*/
+	border:1px solid #11a3ff;/*å°æ ‡é¢˜è¾¹æ¡†çš„ç²—ç»†*/
 }
 ul#tabnav a:link, ul#tabnav a:visited{
 	display:block;
@@ -37,9 +38,9 @@ ul#tabnav a:hover{
 body#st li.st, body#grzl li.grzl,
 body#cj li.cj, body#ma li.ma,
 body#bk li.bk, body#blog li.blog{
-	border-bottom: 0px solid #ffffff;
-	color: #000000;
-	background-color: #ffffff;
+	border-bottom:1px solid #ffffff;
+	color:#000000;
+	background-color:#ffffff;
 }
 body#st li.st a:link, body#st li.st a:visited,
 body#grzl li.grzl a:link, body#grzl li.grzl a:visited,
@@ -50,10 +51,12 @@ body#blog li.blog a:link,  body#blog li.blog a:visited{
 	color:#006;
 	text-decoration:underline
 }
+
+
 #leftpic{
 	
 	width:160px;
-	float:right;
+	float:left;
 	padding-right:15px;
 }
 #leftpic a:link,#leftpic a:visited{
@@ -67,17 +70,16 @@ body#blog li.blog a:link,  body#blog li.blog a:visited{
 	}
 img{
 	border:1px solid #069;
-	margin-bottom:10px;
+	margin-bottom:5px;
 }
 ul#list{
 	
-	
 	list-style-type:none;
 	margin:0px;
-	padding:5px 0px 5px 2px;/*ÎÄ×ÖÄÚÈİ¾à±ß¿òµÄ¾àÀë*/
+	padding:5px 0px 5px 2px;
 }
 ul#list li{
-	line-height:28px;
+	line-height:18px;
 }
 ul#list li a:link{
 	color:#000;
@@ -92,3 +94,44 @@ ul#list li a:hover{
 	color:#006;
 	text-decoration:underline;
 }
+#content1{
+	width:980px;;
+	margin-top:20px;
+	border-left:1px  ;      /*å¤§è¾¹æ¡†å®½åº¦*/
+	border-right:1px;
+	border-bottom:1px  ;
+	padding:20px;/*æ•´ä½“å†…å®¹ä¸å¤§è¾¹æ¡†çš„è·ç¦»*/
+	font-size:18px;/*å†…å®¹ï¼ˆå­—ï¼‰çš„å¤§å°*/
+}
+.tbhead {
+    background-color: #698CC3;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-weight: 800;
+}
+<style type="text/css">
+* {
+    font-family: "å®‹ä½“";
+    fony-size: 12px
+}
+
+;
+.tbhead {
+    background-color: #698CC3;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    font-weight: 800;
+}
+
+;
+.tbleft {
+    border: 1px dashed #698CC3;
+    background-color: #EFEFEF;
+}
+
+;
+.tbright {
+    background-color: #FFFFFF;
+    border: 1px dashed #698CC3;
+}
+

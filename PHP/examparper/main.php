@@ -4,11 +4,9 @@
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <title>无标题文档</title>
 </head>
-<?php
-include ("../conn/conn.php");   //连接数据库
-$pdanswer=trim($_POST['pd']);
-echo $pdanswer ."<br>";
-?>
 <body>
+</body>
+<body
+
 </body>
 </html>

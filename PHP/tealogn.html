@@ -11,7 +11,7 @@
 </head>
 <body style="background:url(image/backgroud3.jpg)">
   <div class="jiemiandiv">
-  <form action="lognteasave.php"  method="post" onsubmit="return chickinput(form)">
+  <form action="lognteasave.php"  name="teaform" method="post" onsubmit="return chickinput()">
     <table background="image/学习.jpg"height="241" border="0" class="dengmenu" >
       <tr>
          <td width="150" height="17">
@@ -38,16 +38,16 @@
 </form>
 </div>       
 <script language="javascript" type="text/javascript">
-   function chickinput(form)              //定义一个判断函数
+   function chickinput()              //定义一个判断函数
    {
-	  if(form.username.value=="")            
+	  if(teaform.username.value=="")            
 	  //判断username文本框中的只是否为空
 	  { 
           alert("请输入用户名!");
 		  form.username.select();          //返回username文本框
 		  return (false);
 	  }
-	  if(form.pwd.value=="")         //判断用户名文本框中的只是否为空
+	  if(teaform.pwd.value=="")         //判断用户名文本框中的只是否为空
 	  {
 		  alert("请输入密码!");
 		  form.pwd.select();         //返回到密码文本框
