@@ -60,7 +60,7 @@ ul#list li a:hover{
    include ("../conn/session.php");
 ?>
 <ul id="tabnav">
-      <li class="st"><a href="rightframe.php">试题查询</a></li>
+      <li class="st"><a href="rightframe.html">试题查询</a></li>
       <li class="grzl"><a href="student.php" target="_self">个人资料</a></li>
      <li class="cj"><a href="examscore.php">成绩查询</a></li>
       <li class="ma"><a href="修改密码界面.html">修改密码</a></li>
